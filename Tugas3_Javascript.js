@@ -18,7 +18,7 @@ function tambahProduk(nama, harga, stok) {
     };
     
     produkToko.push(produkBaru);
-    console.log(`✅ Produk "${nama}" berhasil ditambahkan dengan ID: ${idBaru}`);
+    console.log(` Produk "${nama}" berhasil ditambahkan dengan ID: ${idBaru}`);
 }
 
 // Fungsi untuk menghapus produk berdasarkan ID
@@ -28,17 +28,17 @@ function hapusProduk(id) {
     if (index !== -1) {
         const namaProduk = produkToko[index].nama;
         produkToko.splice(index, 1);
-        console.log(`🗑️ Produk "${namaProduk}" (ID: ${id}) berhasil dihapus`);
+        console.log(` Produk "${namaProduk}" (ID: ${id}) berhasil dihapus`);
         return true;
     } else {
-        console.log(`❌ Produk dengan ID ${id} tidak ditemukan`);
+        console.log(` Produk dengan ID ${id} tidak ditemukan`);
         return false;
     }
 }
 
 // Fungsi untuk menampilkan daftar produk
 function tampilkanProduk() {
-    console.log("\n📦 DAFTAR PRODUK TOKO");
+    console.log("\n DAFTAR PRODUK TOKO");
     console.log("=".repeat(60));
     
     if (produkToko.length === 0) {
