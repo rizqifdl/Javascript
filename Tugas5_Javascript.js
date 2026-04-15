@@ -1,6 +1,5 @@
 class ManajemenProduk {
     constructor() {
-        // 1. List data produk awal minimal 5
         this.produkList = [
             {id: 1, nama: "Laptop", harga: 10000000, stok: 5},
             {id: 2, nama: "Mouse", harga: 150000, stok: 20},
@@ -24,13 +23,11 @@ class ManajemenProduk {
         console.log(` Ditambahkan: ${nama}`);
     }
 
-    // 3. Menghapus Produk - Destructuring
     hapusProduk(id) {
         this.produkList = this.produkList.filter(({id: idProduk}) => idProduk !== id);
         console.log(` Dihapus ID: ${id}`);
     }
-
-    // 4. Menampilkan Semua Produk
+    
     tampilkanSemuaProduk() {
         console.log("\n DAFTAR PRODUK");
         console.log("ID | Nama".padEnd(20) + "Harga".padEnd(12) + "Stok");
@@ -47,25 +44,13 @@ class ManajemenProduk {
     }
 }
 
-// Event Listener Simulation
+
 const sistem = new ManajemenProduk();
-
-// Demo Fitur
 console.log("===} MANAJEMEN PRODUK TOKO ONLINE {===\n");
-
-// 4. Tampilkan awal
 sistem.tampilkanSemuaProduk();
-
-// 2. Tambah produk
 sistem.tambahProduk("Printer", 2000000, 10);
 sistem.tambahProduk("Webcam", 500000, 25);
-
-// 4. Tampilkan setelah tambah
 sistem.tampilkanSemuaProduk();
-
-// 3. Hapus produk
 sistem.hapusProduk(2);
-
-// 4. Tampilkan akhir
 sistem.tampilkanSemuaProduk();
 
